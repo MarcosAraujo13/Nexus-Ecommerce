@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Commerce | A Loja do Futuro</title>
+  <meta name="description" content="E-commerce moderno, rápido e responsivo com catálogo interativo, carrinho em tempo real, cupons e checkout completo.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement-bar">
+    <span>🚚 <strong>Frete Grátis</strong> para todo o Brasil em compras acima de R$ 199</span>
+    <span>•</span>
+    <span>Use o cupom <span class="badge-code">BEMVINDO10</span> para 10% OFF</span>
+  </div>
+
+  <!-- Header Principal -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo -->
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">N</div>
+        <div class="brand-text">Nexus<span>Commerce</span></div>
+      </a>
+
+      <!-- Barra de Busca -->
+      <div class="header-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <input type="text" id="searchInput" placeholder="O que você está procurando hoje? (ex: fone, smartphone, lâmpada...)" autocomplete="off">
+        </div>
+      </div>
+
+      <!-- Ações do Cabeçalho -->
+      <div class="header-actions">
+        <!-- Botão Painel Admin -->
+        <button class="admin-header-link" data-action="open-admin" title="Painel Gerencial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Painel</span>
+        </button>
+
+        <!-- Botão Alternar Tema Claro/Escuro -->
+        <button class="action-btn" id="themeToggleBtn" title="Alternar tema claro/escuro">
+          <!-- Ícone preenchido via JS -->
+        </button>
+
+        <!-- Botão Favoritos -->
+        <button class="action-btn" id="wishlistHeaderBtn" title="Meus Favoritos">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-counter" id="wishlistCountBadge" style="display: none;">0</span>
+        </button>
+
+        <!-- Botão Carrinho -->
+        <button class="action-btn" data-action="open-cart" title="Abrir Carrinho">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="badge-counter cart-count-badge" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner Principal -->
+  <section class="hero-banner">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-tag">✨ NOVA GERAÇÃO TECH</span>
+        <h1 class="hero-title">Eletrônicos & Inovação <span>ao seu alcance</span></h1>
+        <p class="hero-description">Descubra dispositivos de alta performance com design sofisticado, garantia estendida e a entrega mais rápida do país.</p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn-primary-hero">
+            Explorar Catálogo
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <button class="btn-secondary-hero" data-action="open-admin">
+            Cadastrar Produto
+          </button>
+        </div>
+        <div class="hero-badges-row">
+          <div class="hero-feature-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Até 10x Sem Juros</span>
+          </div>
+          <div class="hero-feature-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>5% OFF no PIX</span>
+          </div>
+          <div class="hero-feature-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Garantia de 12 Meses</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faixa de Diferenciais -->
+  <section class="features-strip">
+    <div class="features-container">
+      <div class="feature-box">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        </div>
+        <div>
+          <h4>Entrega Expressa</h4>
+          <p>Despacho em até 24h úteis</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+        </div>
+        <div>
+          <h4>Pagamento Blindado</h4>
+          <p>PIX, Cartão e Boleto Seguro</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div>
+          <h4>Suporte Dedicado</h4>
+          <p>Atendimento especialista 24/7</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+        </div>
+        <div>
+          <h4>Troca Descomplicada</h4>
+          <p>30 dias para devolução grátis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conteúdo Principal / Catálogo -->
+  <main class="main-content" id="catalogo">
+    <!-- Cabeçalho do Catálogo com Filtros -->
+    <div class="catalog-header-bar">
+      <!-- Abas de Categorias -->
+      <nav class="category-tabs-nav" aria-label="Categorias de produtos">
+        <button class="category-tab active" data-category="todos">Todos os Produtos</button>
+        <button class="category-tab" data-category="smartphones">Smartphones & PCs</button>
+        <button class="category-tab" data-category="audio">Áudio & Fones</button>
+        <button class="category-tab" data-category="casa">Casa Inteligente</button>
+        <button class="category-tab" data-category="acessorios">Acessórios & Setup</button>
+      </nav>
+
+      <!-- Barra de Controle (Filtro por preço e Ordenação) -->
+      <div class="filter-and-sort-bar">
+        <div class="filter-left-controls">
+          <div class="price-range-control">
+            <label for="priceRangeInput">Preço Máximo:</label>
+            <input type="range" id="priceRangeInput" min="100" max="10000" step="100" value="10000">
+            <span class="price-value-badge" id="priceRangeValue">Até R$ 10.000</span>
+          </div>
+          <span class="total-count-text" id="totalProductsCount">Carregando catálogo...</span>
+        </div>
+
+        <div class="filter-right-controls">
+          <div class="sort-wrapper">
+            <label for="sortSelect">Ordenar por:</label>
+            <select id="sortSelect" class="sort-select">
+              <option value="featured">Mais Populares</option>
+              <option value="price-asc">Menor Preço</option>
+              <option value="price-desc">Maior Preço</option>
+              <option value="rating">Melhor Avaliação</option>
+              <option value="name">Nome (A - Z)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid de Produtos -->
+    <div class="product-grid" id="productGrid">
+      <!-- Inserido dinamicamente via JavaScript -->
+    </div>
+
+    <!-- Estado Vazio de Busca -->
+    <div class="empty-state" id="emptySearchState">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        <line x1="8" y1="11" x2="14" y2="11"></line>
+      </svg>
+      <h3>Nenhum produto encontrado</h3>
+      <p>Tente ajustar os termos de busca ou mudar os filtros de categoria e preço.</p>
+    </div>
+  </main>
+
+  <!-- Drawer Lateral do Carrinho -->
+  <div class="drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartDrawerTitle">
+    <div class="cart-drawer-header">
+      <h3 id="cartDrawerTitle">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        Seu Carrinho (<span class="cart-count-badge">0</span>)
+      </h3>
+      <button class="btn-close-drawer" id="closeCartBtn" title="Fechar Carrinho">✕</button>
+    </div>
+
+    <!-- Barra de Progresso de Frete Grátis -->
+    <div class="shipping-progress-box">
+      <div class="shipping-progress-text" id="shippingProgressText">
+        Adicione produtos para calcular o frete grátis!
+      </div>
+      <div class="shipping-progress-bar">
+        <div class="shipping-progress-fill" id="shippingProgressFill"></div>
+      </div>
+    </div>
+
+    <!-- Lista de Itens do Carrinho -->
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Inserido via JavaScript -->
+    </div>
+
+    <!-- Estado Vazio do Carrinho -->
+    <div class="empty-state" id="cartEmptyState" style="display: none; padding: 40px 20px;">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <h4>Seu carrinho está vazio</h4>
+      <p style="font-size: 0.85rem; margin-top: 4px;">Navegue pelos produtos e adicione seus itens preferidos!</p>
+    </div>
+
+    <!-- Rodapé e Totais do Carrinho -->
+    <div class="cart-drawer-footer" id="cartFooter">
+      <!-- Cupom de Desconto -->
+      <div class="coupon-section">
+        <form class="coupon-form" id="couponForm">
+          <input type="text" id="couponInput" placeholder="Possui cupom? (ex: BEMVINDO10)" autocomplete="off">
+          <button type="submit" class="btn-apply-coupon">Aplicar</button>
+        </form>
+        <div class="applied-coupon-badge" id="appliedCouponBadge"></div>
+      </div>
+
+      <!-- Resumo Financeiro -->
+      <div class="cart-totals-breakdown">
+        <div class="totals-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">R$ 0,00</span>
+        </div>
+        <div class="totals-row" id="cartDiscountRow" style="display: none;">
+          <span class="discount-tag">Desconto de Cupom</span>
+          <span class="discount-tag" id="cartDiscount">-R$ 0,00</span>
+        </div>
+        <div class="totals-row">
+          <span>Frete</span>
+          <span id="cartShipping">Calcular</span>
+        </div>
+        <div class="totals-row total-final">
+          <span>Total</span>
+          <span id="cartTotal">R$ 0,00</span>
+        </div>
+      </div>
+
+      <!-- Botão de Ação -->
+      <button class="btn-checkout-cta" id="checkoutBtn">
+        Finalizar Compra
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Modal de Detalhes Rápidos (Quick View) -->
+  <div class="modal-backdrop" id="quickViewBackdrop"></div>
+  <div class="modal-wrapper" id="quickViewModal">
+    <div class="modal-content-card">
+      <div class="modal-header-bar">
+        <span class="product-category" id="qvCategory">Categoria</span>
+        <button class="modal-close-btn" id="closeQuickViewBtn">✕</button>
+      </div>
+      <div class="quickview-layout">
+        <div class="quickview-gallery">
+          <img id="qvImage" src="" alt="Imagem do Produto">
+        </div>
+        <div class="quickview-info">
+          <h2 id="qvTitle" style="font-size: 1.5rem; font-weight: 800; margin-bottom: 8px;"></h2>
+          <div class="product-rating" style="margin-bottom: 12px;">
+            <span style="color: var(--color-accent);">★ ★ ★ ★ ★</span>
+            <span class="rating-num" id="qvRating"></span>
+          </div>
+          <div class="current-price" id="qvPrice" style="font-size: 1.8rem; margin-bottom: 12px;"></div>
+          <p id="qvDescription" style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;"></p>
+
+          <!-- Seletor de Cores -->
+          <div class="qv-colors-wrapper">
+            <div class="qv-colors-label">Escolha a Cor / Variante:</div>
+            <div class="qv-colors-list" id="qvColors"></div>
+          </div>
+
+          <!-- Especificações Técnicas -->
+          <div class="qv-specs-container">
+            <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 8px;">Ficha Técnica:</h4>
+            <div id="qvSpecs"></div>
+          </div>
+
+          <div style="font-size: 0.82rem; color: var(--color-success); font-weight: 600; margin-top: 8px;" id="qvStock"></div>
+
+          <!-- Ações do Modal -->
+          <div class="qv-actions-row">
+            <div class="quantity-control" style="height: 44px;">
+              <button class="qty-btn" id="qvQtyMinus" style="width: 38px;">-</button>
+              <input type="text" id="qvQtyInput" value="1" readonly style="width: 40px; text-align: center; border: none; background: transparent; font-weight: bold; color: inherit;">
+              <button class="qty-btn" id="qvQtyPlus" style="width: 38px;">+</button>
+            </div>
+            <button class="btn-checkout-cta" id="qvAddToCartBtn" style="flex: 1;">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Checkout Wizard -->
+  <div class="modal-backdrop" id="checkoutBackdrop"></div>
+  <div class="modal-wrapper" id="checkoutModal">
+    <div class="modal-content-card" style="max-width: 960px;">
+      <div class="modal-header-bar">
+        <h3 style="font-size: 1.2rem; font-weight: 800;">Finalização Segura de Pedido</h3>
+        <button class="modal-close-btn" id="closeCheckoutBtn">✕</button>
+      </div>
+
+      <!-- Barra de Passos -->
+      <div class="checkout-steps-bar">
+        <div class="checkout-step-indicator active" id="stepIndicator1">
+          <span class="step-num">1</span>
+          <span>Entrega & Contato</span>
+        </div>
+        <div class="checkout-step-indicator" id="stepIndicator2">
+          <span class="step-num">2</span>
+          <span>Forma de Pagamento</span>
+        </div>
+        <div class="checkout-step-indicator" id="stepIndicator3">
+          <span class="step-num">3</span>
+          <span>Confirmação</span>
+        </div>
+      </div>
+
+      <div class="checkout-body-grid">
+        <!-- Coluna Esquerda: Formulários por etapa -->
+        <div class="checkout-forms-column">
+          <!-- Passo 1: Informações de Endereço -->
+          <div id="checkoutStep1">
+            <h4 style="margin-bottom: 16px; font-size: 1.05rem;">Dados Pessoais & Endereço de Entrega</h4>
+            <form id="checkoutAddressForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkoutName">Nome Completo *</label>
+                  <input type="text" id="checkoutName" required placeholder="Ex: Maria Silva" value="Marco Aurélio">
+                </div>
+                <div class="form-group">
+                  <label for="checkoutEmail">E-mail *</label>
+                  <input type="email" id="checkoutEmail" required placeholder="seu@email.com" value="marco@exemplo.com">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkoutPhone">Telefone / WhatsApp *</label>
+                  <input type="tel" id="checkoutPhone" required placeholder="(11) 99999-9999" value="(11) 98765-4321">
+                </div>
+                <div class="form-group">
+                  <label for="checkoutCep">CEP * (Busca Automática)</label>
+                  <input type="text" id="checkoutCep" required placeholder="00000-000" maxlength="9" value="01310-100">
+                </div>
+              </div>
+
+              <div class="form-row" style="grid-template-columns: 2fr 1fr;">
+                <div class="form-group">
+                  <label for="checkoutStreet">Logradouro / Rua *</label>
+                  <input type="text" id="checkoutStreet" required placeholder="Rua, Avenida..." value="Avenida Paulista">
+                </div>
+                <div class="form-group">
+                  <label for="checkoutNumber">Número *</label>
+                  <input type="text" id="checkoutNumber" required placeholder="123" value="1000">
+                </div>
+              </div>
+
+              <div class="form-row" style="grid-template-columns: 1fr 1fr 1fr;">
+                <div class="form-group">
+                  <label for="checkoutComplement">Complemento</label>
+                  <input type="text" id="checkoutComplement" placeholder="Apto, Bloco..." value="Apto 42">
+                </div>
+                <div class="form-group">
+                  <label for="checkoutNeighborhood">Bairro *</label>
+                  <input type="text" id="checkoutNeighborhood" required placeholder="Bairro" value="Bela Vista">
+                </div>
+                <div class="form-group">
+                  <label for="checkoutCity">Cidade / UF *</label>
+                  <input type="text" id="checkoutCity" required placeholder="Cidade" value="São Paulo">
+                </div>
+              </div>
+
+              <div style="display: none;">
+                <input type="hidden" id="checkoutState" value="SP">
+              </div>
+
+              <div style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                <button type="submit" class="btn-checkout-cta" style="width: auto; padding: 12px 28px;">
+                  Continuar para Pagamento
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Passo 2: Pagamento -->
+          <div id="checkoutStep2" style="display: none;">
+            <h4 style="margin-bottom: 16px; font-size: 1.05rem;">Escolha a Forma de Pagamento</h4>
+
+            <div class="payment-methods-selector">
+              <label class="payment-method-card">
+                <input type="radio" name="payment_method" value="pix" checked>
+                <span style="font-size: 1.5rem;">⚡</span>
+                <span style="font-weight: 700; font-size: 0.9rem;">PIX</span>
+                <span style="font-size: 0.75rem; color: var(--color-success); font-weight: bold;">5% de Desconto</span>
+              </label>
+
+              <label class="payment-method-card">
+                <input type="radio" name="payment_method" value="card">
+                <span style="font-size: 1.5rem;">💳</span>
+                <span style="font-weight: 700; font-size: 0.9rem;">Cartão de Crédito</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Até 12x</span>
+              </label>
+
+              <label class="payment-method-card">
+                <input type="radio" name="payment_method" value="boleto">
+                <span style="font-size: 1.5rem;">📄</span>
+                <span style="font-weight: 700; font-size: 0.9rem;">Boleto Bancário</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Vencimento em 3 dias</span>
+              </label>
+            </div>
+
+            <form id="checkoutPaymentForm">
+              <!-- Painel PIX -->
+              <div id="paymentPanelPix" class="pix-container-box">
+                <div id="pixQrContainer"></div>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
+                  Escaneie o QR Code no app do seu banco ou copie o código abaixo:
+                </p>
+                <div class="pix-copy-paste-group">
+                  <input type="text" id="pixCodeDisplay" readonly value="">
+                  <button type="button" class="btn-apply-coupon" id="copyPixBtn">Copiar</button>
+                </div>
+              </div>
+
+              <!-- Painel Cartão -->
+              <div id="paymentPanelCard" style="display: none;">
+                <!-- Cartão Interativo -->
+                <div class="credit-card-preview">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="card-preview-chip"></div>
+                    <span style="font-weight: 900; font-style: italic;">NEXUS CARD</span>
+                  </div>
+                  <div class="card-preview-number" id="cardPreviewNumber">•••• •••• •••• ••••</div>
+                  <div class="card-preview-footer">
+                    <div>
+                      <div style="font-size: 0.65rem; opacity: 0.8;">TITULAR</div>
+                      <div id="cardPreviewName" style="font-weight: 600;">NOME DO TITULAR</div>
+                    </div>
+                    <div>
+                      <div style="font-size: 0.65rem; opacity: 0.8;">VALIDADE</div>
+                      <div id="cardPreviewExpiry" style="font-weight: 600;">MM/AA</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="cardNumberInput">Número do Cartão</label>
+                  <input type="text" id="cardNumberInput" placeholder="0000 0000 0000 0000" maxlength="19">
+                </div>
+
+                <div class="form-group">
+                  <label for="cardNameInput">Nome Impresso no Cartão</label>
+                  <input type="text" id="cardNameInput" placeholder="Como consta no cartão">
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="cardExpiryInput">Validade</label>
+                    <input type="text" id="cardExpiryInput" placeholder="MM/AA" maxlength="5">
+                  </div>
+                  <div class="form-group">
+                    <label for="cardCvvInput">CVV</label>
+                    <input type="text" id="cardCvvInput" placeholder="123" maxlength="4">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="cardInstallments">Parcelamento</label>
+                  <select id="cardInstallments"></select>
+                </div>
+              </div>
+
+              <!-- Painel Boleto -->
+              <div id="paymentPanelBoleto" style="display: none;" class="pix-container-box">
+                <p style="font-size: 0.9rem; font-weight: 600; margin-bottom: 8px;">📄 Boleto Bancário Registrado</p>
+                <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 14px;">
+                  O boleto será gerado para download e enviado também para seu e-mail. A compensação bancária ocorre em até 3 dias úteis.
+                </p>
+                <div style="font-family: monospace; font-size: 0.9rem; padding: 10px; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); letter-spacing: 1px;">
+                  34191.79001 01043.510047 91020.150008 8 98450000000000
+                </div>
+              </div>
+
+              <!-- Ações do Passo 2 -->
+              <div style="margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
+                <button type="button" class="btn-apply-coupon" id="btnBackToStep1">
+                  ← Voltar para Endereço
+                </button>
+                <button type="submit" class="btn-checkout-cta" id="btnSubmitOrder" style="width: auto; padding: 12px 32px;">
+                  Confirmar e Finalizar Pedido
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Passo 3: Conclusão do Pedido -->
+          <div id="checkoutStep3" style="display: none;" class="checkout-success-view">
+            <div class="success-icon-badge">✓</div>
+            <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 6px;">Pedido Confirmado com Sucesso!</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Enviamos os detalhes da compra e o link de rastreamento para o seu e-mail.
+            </p>
+
+            <div class="order-receipt-card">
+              <div class="receipt-row">
+                <span>Número do Pedido:</span>
+                <strong id="successOrderId">#NX-000000</strong>
+              </div>
+              <div class="receipt-row">
+                <span>Data:</span>
+                <span id="successOrderDate">--/--/----</span>
+              </div>
+              <div class="receipt-row">
+                <span>Método de Pagamento:</span>
+                <span id="successOrderPayment">PIX</span>
+              </div>
+              <div class="receipt-row">
+                <span>Endereço de Entrega:</span>
+                <span id="successOrderAddress" style="font-size: 0.8rem; max-width: 60%; text-align: right;"></span>
+              </div>
+              <div class="receipt-row" style="border-bottom: none; font-size: 1.05rem; margin-top: 8px;">
+                <span>Total Pago:</span>
+                <strong style="color: var(--color-primary);" id="successOrderTotal">R$ 0,00</strong>
+              </div>
+
+              <div style="margin-top: 16px; border-top: 1px dashed var(--border-color); padding-top: 12px;">
+                <div style="font-size: 0.82rem; font-weight: 700; margin-bottom: 8px;">Itens do Pedido:</div>
+                <div id="successOrderItems"></div>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 14px; margin-top: 24px;">
+              <button class="btn-apply-coupon" id="printReceiptBtn">
+                🖨️ Imprimir Comprovante
+              </button>
+              <button class="btn-checkout-cta" onclick="window.checkoutUI.close();" style="width: auto; padding: 10px 24px;">
+                Continuar Comprando
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Resumo do Carrinho no Checkout -->
+        <div class="checkout-order-summary-box">
+          <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 14px;">Resumo da Compra</h4>
+          <div id="checkoutSummaryList" style="display: flex; flex-direction: column; gap: 10px; max-height: 260px; overflow-y: auto;"></div>
+
+          <div style="margin-top: 16px; border-top: 1px solid var(--border-color); padding-top: 12px; display: flex; flex-direction: column; gap: 6px;">
+            <div class="totals-row">
+              <span>Subtotal</span>
+              <span id="checkoutSubtotal">R$ 0,00</span>
+            </div>
+            <div class="totals-row">
+              <span class="discount-tag">Desconto</span>
+              <span class="discount-tag" id="checkoutDiscount">R$ 0,00</span>
+            </div>
+            <div class="totals-row">
+              <span>Frete</span>
+              <span id="checkoutShipping">Calcular</span>
+            </div>
+            <div class="totals-row total-final" style="font-size: 1.15rem; margin-top: 6px;">
+              <span>Total Final</span>
+              <span id="checkoutTotal">R$ 0,00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Painel Administrativo -->
+  <div class="modal-backdrop" id="adminBackdrop"></div>
+  <div class="modal-wrapper" id="adminModal">
+    <div class="modal-content-card">
+      <div class="modal-header-bar">
+        <h3 style="font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+          🛠️ Painel Gerencial do E-Commerce
+        </h3>
+        <button class="modal-close-btn" id="closeAdminBtn">✕</button>
+      </div>
+
+      <!-- Abas -->
+      <div class="admin-tabs-nav">
+        <button class="admin-tab-btn active" data-tab="addProduct">Cadastrar Novo Produto</button>
+        <button class="admin-tab-btn" data-tab="orders">Pedidos Realizados</button>
+      </div>
+
+      <!-- Conteúdo Aba: Adicionar Produto -->
+      <div id="adminTabAddProduct" class="admin-content-padding">
+        <form id="adminAddProductForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="adminProdName">Nome do Produto *</label>
+              <input type="text" id="adminProdName" required placeholder="Ex: Câmera Mirrorless Pro 4K">
+            </div>
+            <div class="form-group">
+              <label for="adminProdCategory">Categoria *</label>
+              <select id="adminProdCategory" required>
+                <option value="smartphones">Smartphones & Computadores</option>
+                <option value="audio">Áudio & Fones</option>
+                <option value="casa">Casa Inteligente</option>
+                <option value="acessorios">Acessórios & Periféricos</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <div class="form-group">
+              <label for="adminProdPrice">Preço de Venda (R$) *</label>
+              <input type="number" id="adminProdPrice" step="0.01" min="1" required placeholder="1499.90">
+            </div>
+            <div class="form-group">
+              <label for="adminProdOriginalPrice">Preço Original (R$)</label>
+              <input type="number" id="adminProdOriginalPrice" step="0.01" min="1" placeholder="1799.90">
+            </div>
+            <div class="form-group">
+              <label for="adminProdStock">Estoque Inicial</label>
+              <input type="number" id="adminProdStock" min="1" value="15">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="adminProdBadge">Selo Promocional</label>
+              <input type="text" id="adminProdBadge" placeholder="Ex: Lançamento, -20% OFF, Mais Vendido">
+            </div>
+            <div class="form-group">
+              <label for="adminProdImage">URL da Foto</label>
+              <input type="url" id="adminProdImage" placeholder="https://images.unsplash.com/...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="adminProdDescription">Descrição Completa</label>
+            <textarea id="adminProdDescription" rows="3" style="padding: 10px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary);" placeholder="Destaque os principais recursos e diferenciais do produto..."></textarea>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
+            <button type="button" class="btn-apply-coupon" id="adminResetCatalogBtn" style="color: var(--color-danger); border-color: rgba(239, 68, 68, 0.4);">
+              Restaurar Catálogo Padrão
+            </button>
+            <button type="submit" class="btn-checkout-cta" style="width: auto; padding: 12px 28px;">
+              Salvar e Publicar Produto
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Conteúdo Aba: Pedidos Realizados -->
+      <div id="adminTabOrders" class="admin-content-padding" style="display: none;">
+        <div style="overflow-x: auto;">
+          <table class="admin-orders-table">
+            <thead>
+              <tr>
+                <th>Nº Pedido</th>
+                <th>Data</th>
+                <th>Cliente</th>
+                <th>Pagamento</th>
+                <th>Status</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="adminOrdersTableBody"></tbody>
+          </table>
+        </div>
+        <div id="adminOrdersEmpty" class="empty-state" style="display: none;">
+          <p>Nenhum pedido foi realizado ainda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container de Notificações Toast -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Rodapé Principal -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>Nexus<span>Commerce</span></h3>
+        <p>A experiência definitiva em compras online com as melhores marcas globais de tecnologia, atendimento humanizado e segurança ponta a ponta.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Departamentos</h4>
+        <ul>
+          <li><a href="#catalogo">Smartphones & PCs</a></li>
+          <li><a href="#catalogo">Áudio de Alta Fidelidade</a></li>
+          <li><a href="#catalogo">Casa Inteligente</a></li>
+          <li><a href="#catalogo">Periféricos & Acessórios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ajuda & Suporte</h4>
+        <ul>
+          <li><a href="#">Rastrear Meu Pedido</a></li>
+          <li><a href="#">Política de Trocas e Devoluções</a></li>
+          <li><a href="#">Prazos e Entregas</a></li>
+          <li><a href="#">Fale com um Especialista</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Fique por dentro das novidades</h4>
+        <p style="font-size: 0.85rem;">Receba cupons exclusivos, lançamentos e ofertas relâmpago em primeira mão:</p>
+        <form onsubmit="event.preventDefault(); window.app.showToast('Inscrição confirmada! Verifique seu e-mail.', 'success'); this.reset();">
+          <input type="email" placeholder="Seu melhor e-mail" required>
+          <button type="submit">Inscrever</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Nexus Commerce Inc. Todos os direitos reservados. CNPJ: 00.000.000/0001-00.</div>
+      <div>Feito com JavaScript Vanilla, Node.js nativo e CSS3 Moderno para exemplo de projeto.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts da Aplicação em Ordem de Dependência -->
+  <script src="js/products-data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

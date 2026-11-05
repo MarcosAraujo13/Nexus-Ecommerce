@@ -1,0 +1,200 @@
+[
+  {
+    "id": "prod-1",
+    "name": "Smartphone Nexus Ultra 5G",
+    "category": "smartphones",
+    "categoryName": "Smartphones",
+    "price": 4299,
+    "originalPrice": 4999,
+    "rating": 4.9,
+    "reviewsCount": 142,
+    "badge": "Mais Vendido",
+    "stock": 18,
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80",
+    "description": "Tela AMOLED 6.8\" 120Hz, processador Snapdragon 8 Gen 3, 12GB RAM e 256GB de armazenamento com câmera profissional de 200MP.",
+    "colors": [
+      "#1e293b",
+      "#0284c7",
+      "#f8fafc"
+    ],
+    "specs": {
+      "Tela": "6.8\" AMOLED Dinâmico 2X",
+      "Processador": "Snapdragon 8 Gen 3",
+      "Memória RAM": "12 GB",
+      "Armazenamento": "256 GB",
+      "Bateria": "5.000 mAh com carga ultrarrápida 45W"
+    }
+  },
+  {
+    "id": "prod-2",
+    "name": "Headphone Sem Fio PureSound Pro",
+    "category": "audio",
+    "categoryName": "Áudio",
+    "price": 849.9,
+    "originalPrice": 1099.9,
+    "rating": 4.8,
+    "reviewsCount": 98,
+    "badge": "-23% OFF",
+    "stock": 25,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+    "description": "Cancelamento ativo de ruído híbrido (ANC), drivers de 40mm de alta fidelidade e até 40 horas de bateria contínua.",
+    "colors": [
+      "#0f172a",
+      "#f1f5f9",
+      "#b45309"
+    ],
+    "specs": {
+      "Tipo": "Over-Ear Bluetooth 5.3",
+      "Autonomia": "Até 40 horas",
+      "Cancelamento de Ruído": "ANC Híbrido -35dB",
+      "Conexão": "Bluetooth / P2 3.5mm",
+      "Peso": "260g"
+    }
+  },
+  {
+    "id": "prod-3",
+    "name": "Smartwatch Horizon Fit 2",
+    "category": "acessorios",
+    "categoryName": "Acessórios",
+    "price": 649,
+    "originalPrice": 799,
+    "rating": 4.7,
+    "reviewsCount": 76,
+    "badge": "Lançamento",
+    "stock": 12,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    "description": "Monitor cardíaco 24/7, SpO2, GPS integrado, resistência à água 5ATM e mais de 100 modos esportivos.",
+    "colors": [
+      "#0f172a",
+      "#e2e8f0",
+      "#e11d48"
+    ],
+    "specs": {
+      "Display": "1.43\" AMOLED Always-On",
+      "Resistência": "5 ATM (50 metros)",
+      "Bateria": "Até 12 dias de uso típico",
+      "Sensores": "Cardíaco, SpO2, Acelerômetro, GPS"
+    }
+  },
+  {
+    "id": "prod-4",
+    "name": "Caixa de Som Portátil SoundWave Max",
+    "category": "audio",
+    "categoryName": "Áudio",
+    "price": 459.9,
+    "originalPrice": 599.9,
+    "rating": 4.6,
+    "reviewsCount": 52,
+    "badge": "Frete Grátis",
+    "stock": 30,
+    "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&auto=format&fit=crop&q=80",
+    "description": "Potência de 40W RMS, graves profundos com radiadores passivos duplos, proteção IPX7 à prova d'água.",
+    "colors": [
+      "#18181b",
+      "#2563eb",
+      "#dc2626"
+    ],
+    "specs": {
+      "Potência": "40W RMS",
+      "Proteção": "IPX7 à prova d'água",
+      "Bateria": "Até 18 horas de reprodução",
+      "Conectividade": "Bluetooth 5.2 / TWS Stereo"
+    }
+  },
+  {
+    "id": "prod-5",
+    "name": "Notebook AeroBook Pro 15",
+    "category": "smartphones",
+    "categoryName": "Smartphones & Computadores",
+    "price": 6899,
+    "originalPrice": 7599,
+    "rating": 4.9,
+    "reviewsCount": 64,
+    "badge": "Premium",
+    "stock": 8,
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80",
+    "description": "Corpo unibody em alumínio aeroespacial, processador Core i7 13ª Geração, 16GB DDR5, SSD NVMe 1TB e tela 2.8K OLED.",
+    "colors": [
+      "#334155",
+      "#94a3b8"
+    ],
+    "specs": {
+      "Processador": "Intel Core i7-13700H",
+      "Tela": "15.6\" 2.8K 120Hz OLED 100% DCI-P3",
+      "Memória": "16 GB DDR5 5200MHz",
+      "Armazenamento": "1 TB NVMe Gen4",
+      "Peso": "1.49 kg"
+    }
+  },
+  {
+    "id": "prod-6",
+    "name": "Lâmpada Inteligente RGB SmartGlow (Kit 3 un)",
+    "category": "casa",
+    "categoryName": "Casa Inteligente",
+    "price": 189.9,
+    "originalPrice": 249.9,
+    "rating": 4.5,
+    "reviewsCount": 110,
+    "badge": "Kit Especial",
+    "stock": 45,
+    "image": "https://images.unsplash.com/photo-1507499739999-097706ad8914?w=600&auto=format&fit=crop&q=80",
+    "description": "16 milhões de cores, compatível com Alexa e Google Assistente, dimerizável e sem necessidade de hub externo via Wi-Fi.",
+    "colors": [
+      "#ffffff"
+    ],
+    "specs": {
+      "Potência": "10W (equivalente a 75W incandescente)",
+      "Luminosidade": "900 lumens",
+      "Conexão": "Wi-Fi 2.4GHz + BLE",
+      "Vida Útil": "25.000 horas"
+    }
+  },
+  {
+    "id": "prod-7",
+    "name": "Teclado Mecânico RGB ChromaKey Pro",
+    "category": "acessorios",
+    "categoryName": "Acessórios",
+    "price": 379,
+    "originalPrice": 459,
+    "rating": 4.8,
+    "reviewsCount": 89,
+    "badge": "Gamer",
+    "stock": 22,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80",
+    "description": "Switches mecânicos táteis hot-swappable, iluminação RGB por tecla, keycaps PBT double-shot e estrutura em alumínio anodizado.",
+    "colors": [
+      "#09090b",
+      "#f4f4f5"
+    ],
+    "specs": {
+      "Layout": "ABNT2 compacto 75%",
+      "Switches": "Mechanical Brown Tactile",
+      "Conectividade": "Cabo USB-C trançado destacável",
+      "Anti-Ghosting": "100% N-Key Rollover"
+    }
+  },
+  {
+    "id": "prod-8",
+    "name": "Aspirador Robô CleanBot LiDAR 3000",
+    "category": "casa",
+    "categoryName": "Casa Inteligente",
+    "price": 1899,
+    "originalPrice": 2299,
+    "rating": 4.7,
+    "reviewsCount": 43,
+    "badge": "-17% OFF",
+    "stock": 14,
+    "image": "https://images.unsplash.com/photo-1627916607164-7b20241db935?w=600&auto=format&fit=crop&q=80",
+    "description": "Navegação a laser LiDAR 360°, aspira e passa pano simultaneamente, poder de sucção de 4000Pa e mapeamento multi-andares.",
+    "colors": [
+      "#ffffff",
+      "#18181b"
+    ],
+    "specs": {
+      "Poder de Sucção": "4.000 Pa",
+      "Navegação": "Sensor LiDAR a Laser",
+      "Autonomia": "Até 150 minutos",
+      "Recursos": "Retorno automático à base e recarga inteligente"
+    }
+  }
+]

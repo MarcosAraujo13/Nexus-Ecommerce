@@ -1,0 +1,20 @@
+{
+  "name": "nexus-ecommerce",
+  "version": "1.0.0",
+  "description": "E-commerce moderno e completo em JavaScript vanilla e Node.js para exemplo de projeto",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "javascript",
+    "vanilla-js",
+    "nodejs",
+    "store",
+    "projeto-exemplo"
+  ],
+  "author": "Nexus Team",
+  "license": "MIT"
+}
