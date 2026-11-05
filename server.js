@@ -405,7 +405,7 @@ const server = http.createServer(async (req, res) => {
   });
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`====================================================`);
   console.log(`🚀 Servidor Nexus E-Commerce ativo!`);
   console.log(`🌐 Acesse no navegador: http://localhost:${PORT}`);
