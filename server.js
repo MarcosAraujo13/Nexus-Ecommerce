@@ -261,7 +261,7 @@ function readRequestBody(req) {
 
 // Cria o servidor
 const server = http.createServer(async (req, res) => {
-  const parsedUrl = url.parse(req.url, true);
+  const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   const pathname = parsedUrl.pathname;
   const method = req.method;
 
@@ -282,7 +282,7 @@ const server = http.createServer(async (req, res) => {
 
     // GET /api/products
     if (pathname === '/api/products' && method === 'GET') {
-      const category = parsedUrl.query.category;
+      const category = parsedUrl.searchParams.get('category');
       let products = getProducts();
       if (category && category !== 'todos') {
         products = products.filter(p => p.category === category);
